@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+<!--    <settings>-->
+<!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+<!--    </settings>-->
+    <typeAliases>
+        <!--        typeAlias用于配置别名。type属性指定的是实体类全限定类名。alias属性指定别名，当指定了别名就再区分大小写-->
+        <!--        用于指定要配置别名的包，当指定之后，该包下的实体类都会注册别名，并且类名就是别名即User，不再区分大小写-->
+        <package name="com.laj.domain"/>
+    </typeAliases>
+
+    <!--    指定映射配置文件的位置，映射配置文件指的是每个dao独立的配置文件-->
+    <mappers>
+        <!--        package标签是用于指定dao接口所在的包，当指定了之后就不需要在写 mapper以及 resource或者c1ass了-->
+        <package name="com.laj.dao"/>
+        <!--        <mapper resource="com/laj/dao/UserDao.xml"></mapper>-->
+    </mappers>
+</configuration>
